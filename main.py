@@ -124,6 +124,7 @@ def test(epoch):
     # Save checkpoint.
     acc = 100.*correct/total
     if acc > best_acc:
+        print(flush=True)
         print('Saving..', flush=True)
         state = {
             'net': net.state_dict(),
